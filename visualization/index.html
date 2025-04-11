@@ -571,13 +571,13 @@
                     img.onload = () => item.appendChild(img);
                     img.onerror = () => {
                         // console.error(`[Render Batch] Failed image load: ${img.src}`);
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'placeholder';
-                        placeholder.style.width = '100%'; placeholder.style.height = '100%';
-                        placeholder.textContent = `Err ${originalIndex}`;
-                        if (!item.querySelector('img') && !item.querySelector('.placeholder')) {
-                            item.appendChild(placeholder);
-                        }
+                        // const placeholder = document.createElement('div');
+                        // placeholder.className = 'placeholder';
+                        // placeholder.style.width = '100%'; placeholder.style.height = '100%';
+                        // placeholder.textContent = `Err ${originalIndex}`;
+                        // if (!item.querySelector('img') && !item.querySelector('.placeholder')) {
+                        //     item.appendChild(placeholder);
+                        // }
                     };
 
                     item.addEventListener('click', handleItemClick);
