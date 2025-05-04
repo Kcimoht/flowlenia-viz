@@ -216,8 +216,8 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
+            padding-bottom: 100%;
+            /* 1:1 aspect ratio (square) */
             height: 0;
             overflow: hidden;
             border-radius: 12px;
@@ -238,6 +238,17 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+            /* This ensures the video fills the container */
         }
 
         .video-placeholder {
@@ -401,31 +412,23 @@
         <section>
             <div class="card">
                 <h2>Overview</h2>
-                <p>This paper introduces a systematic approach to investigating open-ended evolution in Flow-Lenia, a
-                    continuous cellular automaton with mass conservation and parameter localization. We bridge
-                    artificial intelligence and artificial life techniques by employing Intrinsically Motivated Goal
-                    Exploration Processes (IMGEP) to efficiently explore Flow-Lenia's vast parameter space for diverse
-                    evolutionary dynamics.</p>
 
                 <div class="abstract">
-                    <p>Open-ended evolution—the continuous generation of novelty and increasing complexity without
-                        predetermined endpoints—remains a significant challenge to recreate in artificial systems. We
-                        introduce a systematic approach to investigating open-ended evolution in Flow-Lenia, a
-                        continuous cellular automaton incorporating mass conservation and parameter localization. We
-                        bridge artificial intelligence and artificial life techniques by employing Intrinsically
-                        Motivated Goal Exploration Processes (IMGEP) to effectively explore the vast parameter space of
-                        Flow-Lenia for diverse evolutionary dynamics rather than merely static patterns. We introduce
-                        new mechanisms for parameter propagation, including a negotiation-based mixing rule that
-                        balances competition and cooperation between parameter sets. Our approach combines different
-                        metrics: non-neutral evolutionary activity to capture meaningful adaptive changes, complexity
-                        measures based on video compression, and entropy analysis at different scales to characterize
-                        spatial organization. Experimental results demonstrate that IMGEP significantly outperforms
-                        random search in discovering diverse evolutionary trajectories, with our negotiation mixing rule
-                        consistently producing the highest evolutionary activity. The resulting simulations exhibit
-                        patterns suggesting potential ecological phenomena including competitive exclusion, cooperative
-                        behavior, and environmental specialization. This work advances our understanding of the
-                        conditions necessary for open-ended evolution while providing a systematic method for exploring
-                        complex evolutionary systems.</p>
+                    <p>We present a systematic approach for discovering diverse ecosystem-level emergent properties in
+                        complex systems using Intrinsically Motivated Goal Exploration Processes (IMGEP). While previous
+                        applications of IMGEP focused on individual patterns or behaviors, we extend this methodology to
+                        explore evolutionary dynamics at the system level. Using Flow-Lenia—a continuous cellular
+                        automaton with mass conservation and parameter localization—as our test case, we demonstrate how
+                        goal-directed exploration can efficiently navigate vast parameter spaces to identify conditions
+                        promoting open-ended evolution. We modified aspects of Flow-Lenia to better support
+                        multi-species evolution within simulations. Our implementation evaluates systems using
+                        simulation-wide metrics (evolutionary activity, compression-based complexity, and multi-scale
+                        entropy) that can be adapted to various complex systems. Results show IMGEP discovers more
+                        diverse evolutionary regimes than random search, revealing patterns that suggest ecological
+                        interactions. We complement automated discovery with an interactive exploration tool, creating
+                        an effective human-AI collaborative workflow for scientific investigation. This methodology
+                        provides researchers with a general tool applicable to any parameterizable multi-entity system
+                        where understanding emergent collective properties is of interest.</p>
                 </div>
 
                 <h3>Key Contributions</h3>
@@ -476,14 +479,34 @@
 
             <div class="video-grid">
                 <div class="video-container">
-                    <div class="video-placeholder">
-                        One video
-                    </div>
+                    <video controls autoplay loop muted>
+                        <source src="visualization/673/videos/video_both.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="video-container">
-                    <div class="video-placeholder">
-                        Another one
-                    </div>
+                    <video controls autoplay loop muted>
+                        <source src="visualization/1691/videos/video_both.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video controls autoplay loop muted>
+                        <source src="visualization/204/videos/video_both.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video controls autoplay loop muted>
+                        <source src="visualization/1204/videos/video_both.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video controls autoplay loop muted>
+                        <source src="visualization/2324/videos/video_both.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video controls autoplay loop muted>
+                        <source src="visualization/949/videos/video_both.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
 
